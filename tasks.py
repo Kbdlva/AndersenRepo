@@ -1,30 +1,43 @@
 num_entered = input('Enter a number: ')
 
-number = float(num_entered)
-if  number >= 7:
-    print("Hello")
+try:
+    number = float(num_entered)
+    if  number >= 7:
+        print("Hello")
+except ValueError:
+    print("Invalid input.")
+
 
 
 #2
 name_input = input('Enter a name: ')
 
-if name_input == 'John':
-    print('Hello, John')
-else:
-    print('There is no such name')
+try:
+    if name_input == 'John':
+        print('Hello, John')
+    else:
+        print('There is no such name')
+
+except ValueError:
+    print("Invalid input.")
 
 
 #3
 array = input('Enter numbers separated by spaces: ')
 
-numbers = list(map(int, array.split()))
-result = []
+try:
+    numbers = list(map(int, array.split()))
+    result = []
 
-for num in numbers:
-    if num%3==0:
-        result.append(num)
+    for num in numbers:
+        if num%3==0:
+            result.append(num)
 
-print(result)
+    print(result)
+    
+except ValueError:
+    print("Invalid input.")
+
 
 
 #4 
